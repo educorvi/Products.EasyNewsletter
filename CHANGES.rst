@@ -2,10 +2,11 @@ Changelog
 =========
 
 
-5.0.12 (unreleased)
--------------------
+5.0.12b1 (2024-06-13)
+---------------------
 
-- Nothing changed yet.
+- Fix URL for Sending Issues
+- Configurable 2nd Mailhost
 
 
 5.0.11 (2022-07-08)
