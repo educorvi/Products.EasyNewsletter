@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+from urllib.parse import urlparse
 from datetime import datetime
 from plone import api
 from plone.namedfile.scaling import ImageScale, ImageScaling
@@ -82,9 +83,11 @@ class LocalLoader(object):
             # @@images/image/thumb > thumb
             image_scale = groups[2]
 
-            scaling_view = portal.unrestrictedTraverse(
-                base_url.replace(purl, "").lstrip("/")
-            )
+            url = base_url
+            parsed_url = urlparse(url)
+            path = parsed_url.path.lstrip("/")
+            scaling_view = portal.unrestrictedTraverse(path)
+
             image_scale = scaling_view.publishTraverse(portal.REQUEST, image_fieldname)
             if not image_scale:
                 return
