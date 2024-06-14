@@ -2,10 +2,10 @@ Changelog
 =========
 
 
-5.0.12b2 (unreleased)
+5.0.12b2 (2024-06-14)
 ---------------------
 
-- Nothing changed yet.
+- More robust code to get scaling_view
 
 
 5.0.12b1 (2024-06-13)
